@@ -192,6 +192,7 @@ resource "aws_cloudfront_distribution" "default" {
 
   viewer_certificate {
     iam_certificate_id             = var.acm_certificate_arn
+    ssl_support_method             = "sni-only"
   }
 
   default_cache_behavior {
